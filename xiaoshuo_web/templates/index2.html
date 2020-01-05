@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+	<style type="text/css">
+p{ text-indent:2em;}
+<style type="text/css">
+body {
+	background-color: #FFF;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+body,td,th {
+	font-size: 16px;
+	text-align: left;
+}
+.box .nav h1 {
+	text-align: left;
+}
+.box .banner table tr td p {
+	text-align: left;
+}
+.box .banner table {
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box .dbody img {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+}
+.box .banner table {
+	text-align: left;
+}
+.box .dbody table {
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box .dbody table tr td p {
+	text-align: left;
+}
+.box .dbody table {
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box .banner table {
+	text-align: left;
+}
+.box .banner table {
+	text-align: left;
+}
+.box .banner table {
+	text-align: left;
+}
+.box .banner table tr {
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box .dbody {
+	text-align: left;
+}
+.box .banner .center p {
+	text-align: left;
+}
+.disanduanjiachu {
+	font-weight: bold;
+}
+.jinqianjiachu {
+	font-weight: bold;
+}
+.jinqianjiachu2 {
+	font-weight: bold;
+}
+.top-left {
+	float: left;
+	margin-left: 70px;
+}
+</style>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div style="border: px solid #000000; width: 1050px; height: 1px;margin: 0 auto;">
+<div class="dropdown">
+	<button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+			data-toggle="dropdown">
+		点击查找
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/chart">受欢迎的小说类型</a>
+		</li>
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/2">作家排榜</a>
+		</li>
+		<li role="chart" class="divider"></li>
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/data_sheet">纵横小说总数据</a>
+		</li>
+	</ul>
+</div>
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+    <div id="pie" style="width:1000px; height:600px;"></div>
+    <script>
+        $(
+            function () {
+                var chart = echarts.init(document.getElementById('pie'), 'white', {renderer: 'canvas'});
+                $.ajax({
+                    type: "GET",
+                    url: "http://127.0.0.1:5000/barChart2",
+                    dataType: 'json',
+                    success: function (result) {
+                        chart.setOption(result);
+                    }
+                });
+            }
+        )
+    </script>
+<div class="top-left"><img src="../static/img/tubiao.png" width="163" height="82" /></div>
+<div style="border: px solid #000000; width: 700px; height: 1050px;margin: 0 auto;">
+<div class="box">
+   <div class="nav">
+     <h1>看到2018网络小说家版税收入榜单，你心动了吗？</h1>
+   </div>
+   <div class="banner">
+     <div class="center"><p>网络小说发展至今，其实已有20余年，很多人应该都是陪伴着网络小说的发展长大的，笔者也是，小说中营造的气氛或是紧张刺激，或是怆地呼天，或是欢天喜地，主角的形象或是威风八面，或是神勇无敌，或是伤心惨目，也正因如此，总有一个故事，一个主角能够触动到我们内心中的那一点柔软之处，深深的震撼着我们，我们总能带着憧憬，带着幻想忘我得沉浸在小说的故事里，以此来抚平我们现实生活中的不顺与悲痛。</p>
+
+      <p>因此好的小说总能吸引大批受众，而作者能获得的收益也大大增加，图中是<span class="disanduanjiachu">2018年网络小说家版税收入榜单可视化图，</span>上面列出了前十八位作家的版税收入（版税又称版权使用费），用户可用鼠标在图上悬浮，查看具体的收入信息。</p>
+      </div>
+  </div>
+   <div class="dbody">
+     <img src="../static/img/4.gif" width="700" height="420" />
+     <br>
+     <p>第一名是我们很多人都熟悉的唐家三少，主写玄幻类小说，笔者很喜欢玄幻小说中营造的仙侠世界，唐家三少的版税收入是<span class="jinqianjiachu">13000万元，</span>也就是1.3亿，可见这收益之高，当然这也与作者的知名度有关，再看看榜单，主写玄幻小说的作家有足足8位，可见玄幻字大众心中占了多大的位置，然后便是都市，都市类小说在近几年的受欢迎程度可谓水涨船高，有兴趣的可以去看看笔者的另一篇文章<a href="http://127.0.0.1:5000/chart">行业发展盛衰兴废，小说界中又谁主沉浮</a>。都市占有3位，再然后是历史和言情各占两位，最后竞技同人、仙侠、幻想类小说各占一位。而最后一名是犁天，收入为<span class="jinqianjiachu2">660万元</span>。
+</p>
+      <p>笔者这篇文章是想给各位普及网络小说在如今的行业中并不是那么不堪，而是不同凡响，小说受众多，类型多，进入门槛也不高，若你有点笔力，是不二之选。我会在另一篇文章中给大家讲述这么多年来小说世界谁主沉浮。&nbsp;</p>
+  <br /></div>
+
+</div>
+</div>
+</body>
+</html>

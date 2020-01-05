@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+<style type="text/css">
+p{ text-indent:2em;}
+<style type="text/css">
+body,td,th {
+	font-size: 24px;
+	text-align: left;
+}
+body {
+	background-color: #FFF;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+.box .nav h1 {
+	text-align: left;
+}
+.box .banner table {
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box .banner table {
+	text-align: left;
+}
+.box .banner table {
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box .dbody table {
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box .dbody table {
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box .banner p {
+}
+.box .banner p {
+}
+.shouhang {
+	text-align: left;
+}
+.box .banner {
+	text-align: left;
+}
+.shouhang2 {
+	text-align: left;
+}
+.box .dbody p {
+	text-align: left;
+}
+body,td,th {
+	font-size: 16px;
+}
+.jiachu {
+	font-weight: bold;
+}
+.box .banner p .jiacu {
+	font-weight: bold;
+}
+.jiacu {
+	font-weight: bold;
+}
+.box .top-left {
+	float: left;
+}
+.top-left {
+	float: left;
+	margin-left: 70px;
+}
+.box .banner p {
+	text-align: left;
+}
+.box .banner p {
+	text-align: left;
+}
+.box .banner p {
+}
+.首行 {
+	text-align: left;
+}
+.box .banner .首行 {
+	text-align: left;
+}
+.box .banner p {
+	text-align: left;
+}
+.xiangzuo {
+	text-align: left;
+}
+.box .banner p {
+	text-align: left;
+}
+</style>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div style="border: px solid #000000; width: 1050px; height: 10px;margin: 0 auto;">
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+<div class="dropdown">
+	<button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+			data-toggle="dropdown">
+		点击查找
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/chart">受欢迎的小说类型</a>
+		</li>
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/2">作家排榜</a>
+		</li>
+		<li role="chart" class="divider"></li>
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/data_sheet">纵横小说总数据</a>
+		</li>
+	</ul>
+</div>
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+<div style="border: px solid #000000; width: 1050px; height: 10px;margin: 0 auto;">
+    <div id="bar" style="width:1000px; height:600px;"></div>
+    <script>
+        $(
+            function () {
+                var chart = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
+                $.ajax({
+                    type: "GET",
+                    url: "http://127.0.0.1:5000/barChart",
+                    dataType: 'json',
+                    success: function (result) {
+                        chart.setOption(result);
+                    }
+                });
+            }
+        )
+    </script>
+<div class="top-left"><img src="../static/img/tubiao.png" width="163" height="82" /></div>
+<div class="box">
+    <div style="border: px solid #000000; width: 700px; height: 2220px;margin: 0 auto;">
+   <div class="nav">
+   <h1>行业发展盛衰兴废，小说界中又谁主沉浮</h1>
+   </div>
+   <div class="banner">
+   <p>随着时代进步发展，互联网的高新产业生产、人工智能的科技实现、5G的入世，每个行业都经历着翻天覆地的变化，身处在汹涌波涛下的我们这些职薪青年一不小心就有可能被吞没，但有那么个行业，发展至今20余年，不但没有沉落，反而越发的受欢迎，那便是网络小说行业。</p>
+       <p> 网络小说即小说附着在网络，凭借着互联网的联通性以及互动性，小说这类精神粮食往往更容易寻到归处，小说的种类多，受众多，收益高（详情看我另一篇文章），但门槛不高，不要求你有高学历、丰富的经验，只要你内心中有个庞大的世界想要抒发出来，并且付诸行动将其书写在现世，那你便能入了小说家这行当。        </p>
+     <p>大众的口味是多样的，有的喜欢玄幻类小说，有的喜欢言情类小说等等等等，但是，大众的口味又是相似的，总有一群人有着相似的口味，喜欢看同一类小说，而且数量还不小，那么，如何能够很好的抓住<span class="jiacu">更多</span>用户的心理，写出受欢迎的小说，就看看笔者做的可视化图。 </p>
+     <p>该图数据是从纵横小说网中获得，有着从2014年到2019年不同类别小说的月票总数分布，月票是用户花费金钱所换得的，所以月票数的高低从一定程度上也能体现一部小说、一个类别的受欢迎程度。        </p>
+     <p>用户可以通过将鼠标悬浮在柱状图上获取详细信息，以及通过鼠标的滑轮键滑动来控制图的缩放。&nbsp;</p>&nbsp;
+
+   <p>  <img src="../static/img/1.gif" width="700" height="420" /></p>
+   <P>也可以通过点击下面的时间轴切换不同年份以查看不同分类小说的受欢迎程度。</P>
+   <p><img src="../static/img/2.gif" width="700" height="420" /><br />
+     <span class="shouhang"><p>我们可以从这份可视化图中得知小说行业如今的内容发展趋势，什么类别主沉浮，什么类别后来居上。</p><br />
+     <p>看两个时间点，2014年和2019年。</p></span>
+   <p><img src="../static/img/2014.png" width="700" height="420" />&nbsp;</p>
+   <p>如图，2014年玄幻类小说可谓是鹤立鸡群，精彩的武打，刺激的情节，炫酷的战姿，宏大的世界看来是那代人心中的幻念，而排在第二名、第三名、第四名的也是与玄幻相似的类别小说：异世大陆、奇幻修真、古典仙侠。<span class="jiacu">可见那代人对奇幻、神奇世界的追求之高，每个人心中都有当一个盖世武侠的梦想！</span></p>&nbsp;
+   <p><img src="../static/img/2019.png" width="700" height="420" /><br />
+   </div>
+      <div class="dbody"><span class="shouhang2"><p>再看2019年，让人惊奇的是，居然有其他类别的小说追赶而上，而且隐隐有超过之意，排在第一第二的分别是东方玄幻和古典仙侠，可见玄幻类小说在网络小说界中有着如同霸主一般的地位，常年居高不下，我们看看第三名，为都市生活，其实用户在点击不同年份的变化时就能发现，都市生活类。</p>
+   <p><img src="../static/img/3.gif" width="700" height="420" />&nbsp;</p>
+        <p>而排在第四名的是架空历史类小说，它是在2018年突然发力，一举冲在前五，2018年前都一直是处于较低位置。
+        </p>
+            <p> 笔者为各位分析了不同年，不同类别的小说发展趋势，我们可以根据这个可视化表发现哪些小说类别一直以来都是最受欢迎，哪些小说在近些年又犹异军突起，后来居上。希望这份可视化图能为那些想要进入小说界的人一个参考，写出受欢迎的小说。&nbsp;</p>
+        <p>&nbsp;</p>
+     </div>
+   </div>
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+<div class="dropdown">
+	<button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+			data-toggle="dropdown">
+		点击查找
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/chart">受欢迎的小说类型</a>
+		</li>
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/2">作家排榜</a>
+		</li>
+		<li role="chart" class="divider"></li>
+		<li role="chart">
+			<a role="menuitem" tabindex="-1" href="http://127.0.0.1:5000/data_sheet">纵横小说总数据</a>
+		</li>
+	</ul>
+</div>
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=10>
+</body>
+</html>
