@@ -19,6 +19,6 @@ xiaoshou_web.py和flask_xiaoshou.py主要负责页面的显示和跳转,纵横�
 
 我主要负责的是**读读故事**里的HTML页面制作排版以及对应的链接设置
 
-pythonanywhere(http://chro.pythonanywhere.com)
+pythonanywhere(http://kalent.pythonanywhere.com/)
 
 python_code(https://github.com/LiuqilunNM/python)
